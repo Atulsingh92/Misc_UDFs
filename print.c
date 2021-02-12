@@ -9,6 +9,7 @@
   real p=0.;
 
  void Print_Thread_Face_centroids(Domain *domain, int id)
+ /*Prints centroids of the chosen surface"*/
  {
     real FC[3];
     face_t f;
@@ -33,7 +34,7 @@
     begin_f_loop(f,t)
     {
       flow += F_FLUX(f,t);
-      p += F_P(f,t); //write area aveg pressure.
+      p += F_P(f,t); //write area aveg pressure, tallies with area averaged total pressure.
     }
     end_f_loop(f,t)
     //p = C_P(c,t);
