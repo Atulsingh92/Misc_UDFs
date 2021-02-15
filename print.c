@@ -33,8 +33,8 @@
     t = Lookup_Thread(domain, id);
     begin_f_loop(f,t)
     {
-      flow += F_FLUX(f,t);
-      p += F_P(f,t); //write area aveg pressure, tallies with area averaged total pressure.
+      flow += F_FLUX(f,t); // prints below the given fprintf command
+      p += F_P(f,t); //write area aveg pressure, tallies with area averaged total pressure, but not always, mostly 0.
     }
     end_f_loop(f,t)
     //p = C_P(c,t);
