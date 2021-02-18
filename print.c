@@ -6,22 +6,6 @@
   FILE *fout;
   Domain *domain;
   
- void Print_Thread_Face_centroids(Domain *domain, int id)
- /*Prints centroids of the chosen surface"*/
- {
-    real FC[3];
-    face_t f;
-    Thread *t = Lookup_Thread(domain, id);
-    fprintf(fout,"thread id %d\n", id);
-    begin_f_loop(f,t)
-      {
-      F_CENTROID(FC,f,t);
-      fprintf(fout, "f%d %g %g %g\n", f, FC[0], FC[1], FC[2]);
-      }
-    end_f_loop(f,t)
-    fprintf(fout, "\n");
- }
-
  void Print_Pressure_mdot(Domain *domain, int id)
  {
     cell_t c;
