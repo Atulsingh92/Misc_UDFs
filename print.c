@@ -5,8 +5,6 @@
  #include "udf.h"
   FILE *fout;
   Domain *domain;
-  real flow=0.;
-  real p=0.;
   
  void Print_Thread_Face_centroids(Domain *domain, int id)
  /*Prints centroids of the chosen surface"*/
